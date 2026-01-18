@@ -55,3 +55,13 @@ Bachelor of Cybersecurity graduate from Victoria University (2024). Academic exp
 - Ethical Hacking / Red Team  
 - GRC  
 - General Cybersecurity Graduate roles
+
+----
+
+## Current Technical Focus
+- Strengthening networking fundamentals
+- Learning ethical hacking concepts and tools
+- Improving Python scripting skills
+- Understanding cybersecurity best practices
+
+
