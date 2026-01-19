@@ -1,114 +1,190 @@
-:root { color-scheme: light; }
+/* 
+  Root-level settings.
+  `color-scheme: light` tells the browser this site uses a light theme
+  (helps with form inputs, scrollbars, accessibility).
+*/
+:root {
+  color-scheme: light;
+}
 
-body{
-  margin:0;
+/* 
+  Global page styles.
+  Applied to the entire document.
+*/
+body {
+  margin: 0; /* Remove default browser margins */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height:1.6;
-  background: rgba(0,0,0,0.02);
+  line-height: 1.6; /* Improves readability */
+  background: rgba(0,0,0,0.02); /* Very light grey background */
 }
 
-.wrap{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 16px 56px;
+/* 
+  Main content wrapper.
+  Keeps the site centered and readable on large screens.
+*/
+.wrap {
+  max-width: 980px; /* Prevents content from becoming too wide */
+  margin: 0 auto;   /* Centers the layout horizontally */
+  padding: 24px 16px 56px; /* Inner spacing (top, sides, bottom) */
 }
 
-header{
-  padding: 16px 0 8px;
+/* 
+  Header section (name, location, contact).
+*/
+header {
+  padding: 16px 0 8px; /* Vertical spacing only */
 }
 
-h1{
-  margin: 0 0 6px;
+/* 
+  Main heading (your name + role).
+*/
+h1 {
+  margin: 0 0 6px; /* Space below heading */
   font-size: 32px;
 }
 
-.sub{
+/* 
+  Subtitle text (location, short description).
+*/
+.sub {
   margin: 0;
-  opacity: 0.8;
+  opacity: 0.8; /* Slightly muted so name stands out */
 }
 
-.snap{
+/* 
+  Small snapshot line under header
+  (skills summary like "Cybersecurity graduate • Linux • Python").
+*/
+.snap {
   margin: 8px 0 0;
   opacity: 0.85;
 }
 
-.contact{
+/* 
+  Contact row (email, LinkedIn, GitHub).
+*/
+.contact {
   margin: 10px 0 0;
   opacity: 0.9;
 }
 
-.sep{
+/* 
+  Separator symbol between inline elements ( | ).
+*/
+.sep {
   margin: 0 10px;
   opacity: 0.5;
 }
 
-.card{
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 14px;
+/* 
+  Reusable card container.
+  Used for Summary, Skills, Projects, Certifications, etc.
+*/
+.card {
+  border: 1px solid rgba(0,0,0,0.12); /* Subtle border */
+  border-radius: 14px; /* Rounded corners */
   padding: 14px;
-  margin: 10px 0;
-  background: #fff;
+  margin: 10px 0; /* Vertical spacing between cards */
+  background: #fff; /* White card on light background */
 }
 
-.card.featured{
+/* 
+  Highlighted card (used for important sections like Summary).
+*/
+.card.featured {
   border-color: rgba(0,0,0,0.18);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05); /* Soft elevation */
 }
 
-h2{
+/* 
+  Section titles inside cards.
+*/
+h2 {
   margin: 0 0 8px;
   font-size: 18px;
 }
 
-.card p{
+/* 
+  Paragraph spacing inside cards.
+*/
+.card p {
   margin: 8px 0 0;
 }
 
-.clean-list{
-  margin: 6px 0 0 18px;
+/* 
+  Clean bullet list styling.
+  Used for education, projects, certifications, etc.
+*/
+.clean-list {
+  margin: 6px 0 0 18px; /* Slight indent for bullets */
   padding: 0;
 }
 
-.clean-list li{
-  margin: 2px 0; /* tighter = less “tall boxes” */
+/* 
+  Individual list item spacing.
+  Kept tight to avoid tall boxes.
+*/
+.clean-list li {
+  margin: 2px 0;
 }
 
-.grid{
+/* 
+  Grid layout used for side-by-side sections
+  (e.g. Skills + Career Interests).
+*/
+.grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Single column by default */
   gap: 12px;
 }
 
-@media (min-width: 820px){
-  .grid{ grid-template-columns: 1.2fr 0.8fr; }
+/* 
+  Responsive layout for larger screens.
+  Switches to two columns on desktop.
+*/
+@media (min-width: 820px) {
+  .grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
 }
 
-/* Skill tags */
-.tag{
-  display:inline-block;
+/* 
+  Skill tags (pill-style labels).
+  Used for OS, tools, networking skills, etc.
+*/
+.tag {
+  display: inline-block;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 999px; /* Fully rounded pill shape */
   border: 1px solid rgba(0,0,0,0.16);
   margin: 6px 6px 0 0;
   font-size: 13px;
   background: rgba(0,0,0,0.02);
 }
 
-/* Buttons */
-.btn{
-  display:inline-block;
+/* 
+  Button-style links (LinkedIn, GitHub).
+*/
+.btn {
+  display: inline-block;
   padding: 10px 14px;
   border: 1px solid rgba(0,0,0,0.14);
   border-radius: 12px;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline */
   margin-right: 10px;
 }
 
-.btn:hover{
+/* 
+  Hover effect for buttons.
+*/
+.btn:hover {
   border-color: rgba(0,0,0,0.28);
 }
 
-footer{
+/* 
+  Footer styling.
+*/
+footer {
   margin-top: 22px;
   opacity: 0.7;
   font-size: 14px;
