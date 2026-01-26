@@ -1,0 +1,249 @@
+/*
+  Root-level settings.
+  `color-scheme: light` tells the browser this site uses a light theme
+  (helps with form inputs, scrollbars, accessibility).
+*/
+:root {
+  color-scheme: light;
+}
+
+/*
+  Global page styles.
+*/
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/*
+  Main content wrapper.
+*/
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 56px;
+}
+
+/*
+  Header / hero section.
+*/
+header {
+  padding: 16px 0 8px;
+}
+
+.hero {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 14px;
+}
+
+.hero-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-actions {
+  margin-top: 12px;
+}
+
+/*
+  Main heading (name + role).
+*/
+h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+}
+
+/*
+  Subtitle text (location).
+*/
+.sub {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/*
+  Muted inline text (used in header title).
+*/
+.muted {
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+/*
+  Short skills snapshot line.
+*/
+.snap {
+  margin: 8px 0 0;
+  opacity: 0.85;
+}
+
+/*
+  Contact row (email + availability).
+*/
+.contact {
+  margin: 10px 0 0;
+  opacity: 0.9;
+}
+
+/* Prevents email address from breaking into multiple lines */
+.contact a {
+  white-space: nowrap;
+}
+
+/*
+  Separator symbol ( | ).
+*/
+.sep {
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+/*
+  Reusable card container.
+*/
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 14px;
+  margin: 10px 0;
+  background: #fff;
+}
+
+/*
+  Highlighted card (important sections).
+*/
+.card.featured {
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/*
+  Section headings.
+*/
+h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+/*
+  Subheadings (used for skills + project title).
+*/
+h3 {
+  margin: 12px 0 6px;
+  font-size: 15px;
+}
+
+/*
+  Paragraph spacing inside cards.
+*/
+.card p {
+  margin: 8px 0 0;
+}
+
+/*
+  Clean bullet lists.
+*/
+.clean-list {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.clean-list li {
+  margin: 2px 0;
+}
+
+/*
+  Grid layout for side-by-side sections.
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 820px) {
+  .grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+/*
+  Skill tags (pill style).
+*/
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  margin: 6px 6px 0 0;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/*
+  Button-style links.
+*/
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  border-color: rgba(0, 0, 0, 0.28);
+}
+
+/* Optional lighter button */
+.btn.ghost {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/*
+  Collapsible sections (certifications).
+*/
+.expand {
+  margin-top: 10px;
+}
+
+.expand summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.expand[open] summary {
+  opacity: 0.9;
+}
+
+.expand ul {
+  margin-top: 6px;
+}
+
+.expand summary::-webkit-details-marker {
+  opacity: 0.6;
+}
+
+/*
+  Footer styling.
+*/
+footer {
+  margin-top: 22px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Additional mobile tweak: Stack buttons on very small screens */
+@media (max-width: 480px) {
+  .hero-actions .btn {
+    display: block;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+}
